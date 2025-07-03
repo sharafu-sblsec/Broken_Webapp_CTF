@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Playfair+Display:wght@700&family=Great+Vibes&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="/static/css/register.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/register.css') }}">
+  
+</head>
+    
+ <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<body>
+  
+
+  <div class="overlay">
+    <div class="overlay-flex">
+
+
+    <div class="register-box">
+      <div class="register-title">
+        <img src="/static/banklogo.PNG" alt="poochaBANK Logo">
+         User - Register</div>
+      <form method="POST" action="/register">
+        <div class="mb-3">
+          <label for="fullname" class="form-label">Full Name</label>
+          <input type="text" class="form-control" id="fullname" name="fullname" required />
+        </div>
+        <div class="mb-3">
+          <label for="username" class="form-label">Username</label>
+          <input type="text" class="form-control" id="username" name="username" required />
+        </div>
+        <div class="mb-4">
+          <label for="password" class="form-label">Password</label>
+          <input type="password" class="form-control" id="password" name="password" required />
+        </div>
+        <button type="submit" class="btn btn-primary btn-custom">Create Account</button>
+        <div class="text-center mt-2">
+  <small class="text-muted">&copy; 2025 sharafu@apt2002. All rights reserved.</small>
+</div>
+        <div class="login-link">
+         <p>Already have an account? <a href="/login">Login</a></p>   
+        </div>
+        
+      </form>
+        
+    </div>
+    <div class="text-box">
+      <h2>Why Join Cat Bank?</h2>
+      <p>
+    In a world where whiskers wield wisdom and tails twitch with ambition, Cat Bank rises as the ultimate haven for feline finance. More than just a bank, it is a legendary institution where dreams are groomed, savings are pounced upon, and futures are purred into reality. From its grand yarn-vaults to its velvet-cushioned teller booths, every inch of Cat Bank is designed with the feline spirit in mind. We offer not only traditional services like MeowPay™ and Tabby Trust Funds, but also innovative offerings like FluffCoin—our exclusive crypto-catcurrency that's sweeping through the Whisker Markets. 
+
+    Whether you're a street-smart alley kitten looking to stash your first goldfish coin or a regal Persian managing a moonlight real estate empire, Cat Bank welcomes you with open paws. Our advisors don’t just talk numbers—they purr advice tailored to your nine lives. And with our PawStart™ microloan program, young kittenpreneurs can finally chase their business dreams—be it launching a catnip bakery or building a scratching post startup. 
+
+    When you join Cat Bank, you join a dynasty of determination, a fellowship of fur, and a future that's secure, stylish, and satisfyingly sassy. So don’t wait behind the scratching post of hesitation—take a leap of faith, land on your financial feet, and join the purr-suit of prosperity with Cat Bank. After all, here it’s not just about the money—it’s about the meowney!
+  </p>
+    </div>
+
+
+  </div>
+  </div>
+  
+{% if username_taken %}
+<script>const usernameTaken = true;</script>
+{% endif %}
+
+{% if registered %}
+<script>const registrationSuccess = true;</script>
+{% endif %}
+
+{% if weak_password %}
+<script>const weakPassword = true;</script>
+{% endif %}
+
+{% if invalid_username %}
+<script>const invalidUsername = true;</script>
+{% endif %}
+
+{% if missing_fields %}
+<script>const missingFields = true;</script>
+{% endif %}
+
+<script src="{{ url_for('static', filename='js/registerstatus.js') }}"></script>
+
+
+
+</body>
+</html>

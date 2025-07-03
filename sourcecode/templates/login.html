@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login</title>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"/>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Playfair+Display:wght@700&family=Great+Vibes&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="/static/css/login.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+  
+</head>
+
+<body>
+  <div class="title-box">
+    
+  <img src="/static/catlogoexpired.png" alt="logo" class="logo">
+  <button class="login-button" onclick="openLoginModal()">Login</button>
+  
+  </div>
+
+  <div class="pgraphcontainer">
+    <div class="pgraph-box">
+      <div class="pgraph-title">
+      <h1>About Us</h1>
+      </div>
+      <p style="color: black;">
+        Welcome to <strong>Cat Bank</strong>, the world's first and only financial institution exclusively run by and for cats! <br>
+In a whimsical world where felines reign supreme, Cat Bank emerged as the go-to destination for all kitty coin transactions, tuna investments, and whisker insurance plans. <br>
+Founded centuries ago by the legendary feline entrepreneur <em>Kandanpoocha</em>, Cat Bank was built on the belief that every cat deserves a cozy financial cushion and a stash of goldfish savings. <br>
+With velvet-pawed bankers, purring advisors, and high-security yarn vaults, the Cat Bank offers premium services including MeowPay™, Purrsurance™, and Tabby Trust Funds. <br>
+From alley cats saving up for a diamond-studded collar to royal Persians investing in moonlight real estate, Cat Bank is where dreams are paw-sible. <br>
+Because at Cat Bank, it's not just about the money — it's about the meowney!  <br><br>
+
+Today, Cat Bank has branches across the Feline Federation, including Meowhattan, Purris, and Whiskerland. <br>
+Each branch features luxury nap zones, catnip lounges, and a gold-plated litterbox for elite members. <br>
+They even offer investment tips from the wisest of cats — the 21-year-old Siamese known only as “The Meowgician.” <br>
+Their latest innovation? Crypto-catcurrency — FluffCoin — which has taken the whisker market by storm. <br>
+Kitten entrepreneurs can now launch their own startups with help from Cat Bank’s PawStart™ microloan program. <br><br>
+
+Every month, the bank hosts the famous “Pawlitical Economy Gala,” where cats in tiny tuxedos discuss global purr-formance and honor the memory of Kandanpoocha with a 24k gold tuna sculpture. <br>
+Whether you're a playful kitten planning your future or a wise old tomcat managing your estate, Cat Bank is the place to secure your nine lives financially. <br>
+Join today and experience the purrfect blend of fantasy, finance, and feline flair!</p>
+      
+    </div>
+
+   
+<div id="loginModal" class="login-modal">
+  <div class="login-box">
+    <button class="close-btn" onclick="closeLoginModal()">×</button>
+    <div class="login-title">
+      <img src="/static/banklogo.PNG" alt="poochaBANK Logo">
+      User -Login
+    </div>
+    <form method="POST" action="/login" novalidate>
+      
+      <div class="mb-3">
+        <label for="username" class="form-label">Username</label>
+        <input type="text" class="form-control" id="username" name="username"
+               required pattern="^[a-zA-Z0-9_]{4,20}$"
+               title="Username must be 4–20 characters. Only letters, numbers, and underscores allowed." />
+      </div>
+
+      <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input type="password" class="form-control" id="password" name="password"
+               required minlength="6" maxlength="50"
+               title="Password must be at least 6 characters long" />
+      </div>
+
+      <button type="submit" class="btn btn-primary">Login</button>
+
+      <div class="text-center mt-2">
+        <small class="text-muted">&copy; 2025 sharafu@apt2002. All rights reserved.</small>
+      </div>
+
+      <div class="register-link">
+        <p>Don't have an account? <a href="/register">Register</a></p>
+      </div>
+    </form>
+  </div>
+</div>
+
+    
+</div>
+
+<div class="cat-overlay-section">
+  <div class="overlay-content">
+    <h1>Kandanpoocha: The Legendary Founder of Cat Bank</h1>
+
+  <h2>Introduction</h2>
+  <p>In the fantastical world of the Feline Federation, one name shimmers among whiskers and tail-flicks like the brightest star: <strong>Kandanpoocha</strong>. Revered as both visionary and pioneer, Kandanpoocha is the legendary founder of <strong>Cat Bank</strong>—the first-ever financial institution built <em>for cats, by cats</em>. This mammoth feline financier didn't just start a bank; they created an entire ecosystem of whisker-driven economy, whimsical catcoin innovations, and whisker-warming community values that endure centuries on.</p>
+
+  <h2>1. Origins & Early Life</h2>
+  <p>Legend has it that Kandanpoocha was born in an alley in <strong>Meowhattan</strong>, under the glow of a full moon and the stirring mews of opportunity. They were a resourceful kitten—street-smart, quick-witted, and always collecting scraps of shiny things. Some say that from the day they discovered a lost tuna coin, they were hooked on the thrill of accumulation and value.</p>
+  <p>Their natural leadership emerged early. Kandanpoocha organized fellow alley cats into shifting “credit unions”—exchanging toys, tuna, and social favors. By adulthood, they were a respected economic mind among Meowhattan’s feline elite.</p>
+
+  <h2>2. Vision Behind Cat Bank</h2>
+  <p>Kandanpoocha believed every cat—whether alley run, royal Persians, or lazy tabbies—deserved access to:</p>
+  <ul>
+    <p  style="font-size: 1rem;" > Secure savings (perhaps a velvet sock in a yarn vault)</p>
+    <p  style="font-size: 1rem;" > Microloans for entrepreneurial kittens</p>
+    <p  style="font-size: 1rem;" > Insurance for the occasional vet visit or furniture scratch</p>
+    <p  style="font-size: 1rem;" > Paid nap zones and grooming lounges</p>
+  </ul>
+  <p>Their vision wasn’t about wealth—it was about dignity, security, and empowering cats to shape their own futures.</p>
+
+  <h2>3. Building the Institution</h2>
+  <p>Building a bank run entirely by cats was no small feat:</p>
+  <ul>
+    <p  style="font-size: 1rem;" ><strong>Initial Funding:</strong> Kandanpoocha convinced wealthy felines to invest their goldfish and tuna coins.</p>
+    <p  style="font-size: 1rem;" ><strong>Infrastructure:</strong> Yarn vaults, catnip lounges, and gold-plated litterboxes became standard.</p>
+    <p  style="font-size: 1rem;" ><strong>Staff:</strong> Purring advisors, velvet-pawed bankers, and mystical “Meowgicians.”</p>
+    <p  style="font-size: 1rem;" ><strong>Innovations:</strong> MeowPay™, Purrsurance™, Tabby Trust Funds—just to name a few.</p>
+  </ul>
+
+  <h2>4. Legacy of Leadership</h2>
+  <p>Though rarely seen in public, Kandanpoocha’s pawprint is felt everywhere:</p>
+  <ul>
+    <p style="font-size: 1rem;" ><strong>Decentralized leadership</strong> in Meowhattan, Purris, and Whiskerland</p>
+    <p style="font-size: 1rem;" ><strong>PawStart™</strong> microloan programs for kitten-run businesses</p>
+    <p style="font-size: 1rem;" ><strong>The Pawlitical Economy Gala</strong>, where feline elite celebrate their financial flair</p>
+  </ul>
+
+  <h2>5. Symbolism & Myth</h2>
+  <p>Kandanpoocha is a mythical figure across feline culture:</p>
+  <ul>
+    <p style="font-size: 1rem;" > Featured in tapestries, upright, holding a tuna coin</p>
+    <p style="font-size: 1rem;" > Their phrase: “Every cat deserves a cozy cushion” appears in every Cat Bank branch</p>
+    <p style="font-size: 1rem;" > A golden tuna statue honors them each year at the gala</p>
+  </ul>
+
+  <h2>6. The Modern Meowconomy</h2>
+  <p>Today, Cat Bank thrives on Kandanpoocha’s legacy:</p>
+  <ul>
+    <p style="font-size: 1rem;" ><strong>FluffCoin</strong>—a kitty cryptocurrency used across the Federation</p>
+    <p style="font-size: 1rem;" ><strong>21-year-old Meowgician</strong> acts as spiritual and financial guide</p>
+    <p style="font-size: 1rem;" >Branches now offer nap credits, dream insurance, and NFTuna assets</p>
+  </ul>
+
+  
+  <p>In the grand anthology of feline lore, <strong>Kandanpoocha</strong> stands as the cat who dared to redefine catkind’s financial destiny. From alley-born to economy-builder, their journey proves that even the softest paws can leave the deepest prints. Their legacy lives in every whisker-twitching transaction, every tuna-backed bond, and every well-cushioned catnap funded by the dreams of the Cat Bank.</p>
+  <p><em>So next time you invest your MeowCoins, remember — it's not just finance, it's pure meowgic.</em></p>
+</section>
+  </div>
+
+<script src="{{ url_for('static', filename='js/modal.js') }}"></script>
+
+{% if error %}
+<script>
+  const loginerror = true;
+</script>
+<script src="{{ url_for('static', filename='js/loginerror.js') }}"></script>
+{% endif %}
+
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Add Money - Admin</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+ 
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+  
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Playfair+Display:wght@700&family=Great+Vibes&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="/static/css/addmoney.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/addmoney.css') }}">
+  
+</head>
+<body>
+  <div class="title-box">
+    
+  <img src="/static/adminlogo.png" alt="logo" class="logo">
+  </div>
+
+<div class="form-container">
+  <div class="form-box">
+    <div class="form-title"><img src="/static/banklogo.PNG" alt="Logo" width="40" />Add Money to User</div>
+
+    <div class="user-details">
+      <p><span>Full Name:</span> {{ user.fullname }}</p>
+      <p><span>Account Number:</span> {{ user.account_number }}</p>
+    </div>
+
+    <form id="addMoneyForm" method="POST" action="/admin/add-money/{{ user.id }}">
+      <div class="mb-3">
+        <label for="amount" class="form-label">Amount to Add</label>
+        <input type="number" class="form-control" id="amount" name="amount" step="0.01" min="0.01" required>
+      </div>
+
+      <div class="btn-group">
+        <button type="submit" class="btn btn-outline-secondary btn-back">Add Money</button>
+        <a href="/admin/user/{{ user.id }}" class="btn btn-outline-secondary btn-back-normal">Back to User info Dashboard</a>
+      </div>
+    </form>
+    <div class="text-center mt-4">
+    <small class="text-muted">&copy; 2025 sharafu@apt2002. All rights reserved.</small>
+  </div>
+
+  </div>
+
+  <div class="instruction-box">
+  <h4>The Tale of Kandanpoocha in Jail</h4>
+  <p>
+    Once upon a tail-flicking afternoon, in the Kingdom of Meowvalon, there lived a legendary feline banker named <strong>Kandanpoocha</strong>. Known across alleyways and attic vaults for founding the majestic <em>poochaBANK</em>, Kandanpoocha handled everything from tuna bonds to sardine securities. But with great fur came great suspicion.
+  </p>
+
+  <p>
+    One moonlit evening, as the Whisker Moon rose high, royal guards from the <strong>Feline Financial Authority</strong> came storming into poochaBANK. Kandanpoocha was accused of the greatest crime in catconomics history — unauthorized yarn laundering and overfeeding the royal kittens with interest-heavy fish treats.
+  </p>
+
+  <p>
+    With a puffed tail and proud whiskers, Kandanpoocha meowed, "I did it all for the cats!" But alas, he was sentenced to 7 lives in the Catnip Correctional Castle, a grim place where scratching posts were dull and fish bowls were strictly ornamental.
+  </p>
+
+  <p>
+    Yet, behind those metal grates and sleepy-eyed guards, Kandanpoocha began secretly teaching financial wisdom to his fellow feline inmates. He established the first underground litter-ledger, taught tabby-tax evasion awareness, and even ran a secret sardine exchange between 9:00 AM and 2:00 PM (with proper grooming breaks in between).
+  </p>
+
+  <p>
+    Rumor has it that every full moon, you can still hear his soft meows echoing through the stone halls — "Mewwww meww mewww... diversify your tuna investments..."
+  </p>
+
+  <p>
+    So the next time you transfer some coins or request a fish loan, remember the sacrifice of Kandanpoocha — the cat who clawed against injustice and got purrsecuted for caring too much.
+  </p>
+</div>
+
+  </div>
+  
+
+  {% if success %}
+  <script>const addSuccess = "{{ success }}";</script>
+  {% endif %}
+  {% if error %}
+  <script>const addError = "{{ error }}";</script>
+  {% endif %}
+<script src="{{ url_for('static', filename='js/addmoney.js') }}"></script>
+
+</body>
+</html>

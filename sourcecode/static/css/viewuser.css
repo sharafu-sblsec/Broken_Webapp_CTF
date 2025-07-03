@@ -1,0 +1,142 @@
+body {
+      background: 
+       linear-gradient(rgba(118, 177, 228, 0.7), rgba(255, 255, 255, 0.6)), 
+       url('/static/cat1.jpg') no-repeat center center/cover;
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      font-family: 'Roboto', sans-serif;
+      padding: 5;
+      height: 100%;
+      margin: 0;
+    }
+
+    .title-box {
+       
+       color: rgb(234, 255, 0);
+       padding: 1rem;
+       border-radius: 0px;
+       
+       
+
+       width: 100%;
+       max-width: 100%;
+       min-width: 160px;
+                  
+       text-align: center;
+       box-sizing: border-box;
+       
+       top: 0;
+       
+    }
+    
+     .logo {
+       margin: 0.5rem auto 0 auto;
+       width: 50px;
+       height: auto;
+       display: block;
+    }
+    
+
+    .info-box {      
+      
+      border-radius: 5px;     
+      max-width: 700px;
+      margin: auto;
+      padding: 1rem;
+      margin-top: 10px;
+    }
+
+    
+
+    .info-title {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 2rem;
+    }
+
+    .info-title img {
+      margin-top: 0.4rem;
+      width: 30px;
+      height: auto;
+
+    }
+
+    .user-info p {
+      font-size: 1rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .user-info span {
+      font-weight: 600;
+    }
+
+    .btn-group {
+      display: flex;
+      flex-direction: column-reverse;
+      gap: 1rem;
+      margin-top: 2rem;
+      cursor: pointer;
+      font-weight: bold;
+      transition: all 0.3s ease-in-out;
+    }
+    .btn-group > .btn {
+      border-radius: 18px !important; 
+    }
+
+
+    .btn-back {
+      margin-top: 25px;
+      background: linear-gradient(to top, #1374d4, #a8bfcb);
+      color: #181818;
+      
+    }
+    .btn-back:hover {
+       transform: scale(1.05);
+       background: linear-gradient(135deg, #c0f923, #0b7b03);
+    }
+
+    .btn-back-red {
+      margin-top: 25px;
+      background: linear-gradient(to top, #1374d4, #a8bfcb);
+      color: #181818;
+      
+    }
+    .btn-back-red:hover {
+      
+       transform: scale(1.05);
+       background: linear-gradient(135deg, #f3f17b, #ee0307);
+    
+    }
+
+    .btn-back-normal {
+      margin-top: 25px;
+      background: linear-gradient(to top, #1374d4, #a8bfcb);
+      color: #181818;
+      
+    }
+    .btn-back-normal:hover {
+      
+       transform: scale(1.05);
+       background: linear-gradient(135deg, #ece8e8, #454343);
+    }
+
+    small.text-muted {
+    font-size: 0.70rem;
+    display: block;
+    margin-top: 5rem;
+    }
+
+    @media (min-width: 768px) {
+      .btn-group {
+        flex-direction: row;
+        justify-content: center;
+      }
+      .info-box {
+        justify-content: center;
+        
+      }
+    }

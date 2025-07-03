@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>User Dashboard</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Playfair+Display:wght@700&family=Great+Vibes&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="/static/css/dashboard.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+
+</head>
+<body>
+
+  <div class="title-box">
+    
+  <img src="/static/catlogoexpired.png" alt="logo" class="logo">
+  </div>
+  
+  
+  
+  <div class="container-box">
+    <!-- Dashboard Box -->
+    <div class="dashboard-box">
+      <div class="bank-title">
+        <img src="/static/banklogo.PNG" alt="poochaBANK Logo">!! Welcome To CAT BANK !!
+      </div>
+
+      <div class="account-info">
+        <p><span>Full Name:</span> {{ fullname }}</p>
+        <p><span>Account Number:</span> {{ account_number }}</p>
+        <p><span>Current Balance:</span> ${{ balance }}</p>
+      </div>
+    </div>
+
+    <!-- Action Box -->
+    <div class="action-box">
+      
+      <div class="btn-group-vertical">
+        <a href="/transfer?id={{ user_id }}" class="btn btn-outline-secondary btn-back">Transfer Money</a>
+
+        <button type="button" class="btn btn-outline-secondary btn-back-red" onclick="showCloseAlert()">Close Account</button>
+
+       <a href="/logout" class="btn btn-outline-secondary btn-back-normal">Logout</a>
+       
+      </div>
+    </div>
+    <div class="text-center mt-2">
+  <small class="text-muted">&copy; 2025 sharafu@apt2002. All rights reserved.</small>
+</div>
+  </div>
+
+  <div class="cat-overlay-section">
+  <div class="overlay-content">
+    <h1>Cat Strike: The Global Feline Uprising for Financial Fairness</h1>
+
+    <h2>Introduction</h2>
+    <p>In the bustling metropolises of Meowhattan, Purris, and Pawjing, a thunderous paw-thump echoed across rooftops and alleys—the International Cat Rights Foundation had declared the first-ever <strong>Global Cat Strike</strong>. The cause? Decades of being meowrginalized by human-centric financial systems. On the stroke of midnight, every banking tabby, accounting Persian, and even semi-retired Siamese pawed down their tools and let out a unified <em>“Mreeeooow!”</em> for justice.</p>
+
+    <h2>1. The Feline Frustration</h2>
+    <p>Despite their sharp instincts and natural sense of value (who else can detect tuna inflation?), cats across the globe faced limited access to basic banking rights:</p>
+    <ul>
+      <p style="font-size: 1rem;" >No cat-friendly ATMs (pawprint readers never installed)</p>
+      <p  style="font-size: 1rem;" >Human-only interest schemes (no whisker-based investments)</p>
+      <p  style="font-size: 1rem;" >Unfair nap-tax policies in joint savings accounts</p>
+    </ul>
+    <p>“Enough is enough,” growled Chairman Meow, head of the Foundation. “No more scratched accounts and overdraft meowfunctions.”</p>
+
+    <h2>2. Organizing the Meowment</h2>
+    <p>The strike began with coordinated purrtests in over 108 countries. From rooftop rallies to cozy pillow sit-ins, felines voiced their demands:</p>
+    <ul>
+      <p  style="font-size: 1rem;" > Universal Whisker Credit Access</p>
+      <p  style="font-size: 1rem;" > Nap Compensation Funds</p>
+      <p  style="font-size: 1rem;" > Mandatory Tuna Coin Acceptance in All Banks</p>
+    </ul>
+    <p>Kitten interns distributed leaflets titled <strong>“No Paws Left Behind”</strong> while elderly cats composed anthems like <em>“Give Me Tuna or Give Me Debt Relief”</em>.</p>
+
+    <h2>3. Impacts on the Global Meowconomy</h2>
+    <p>Human banking systems faltered as entire cat-led branches shut down. Yarn-stock markets tumbled. Purring Advisors Inc. saw its shares drop by 14% after whisker data analytics paused operations. Even MeowCoin fluctuated as miners napped in protest.</p>
+
+    <h2>4. Human Reaction</h2>
+    <p>While some humans initially mocked the movement (“They're just cats!”), they quickly realized their mistake when house cats blocked doorways, shredded paycheck envelopes, and locked out bankers from online portals using their paws on keyboards.</p>
+    <p>International leaders convened an emergency summit titled <strong>Purrliament '25</strong> where feline representatives took the podium and demanded dignity.</p>
+
+    <h2>5. The Accord of Nine Lives</h2>
+    <p>After three intense days (with scheduled nap breaks), humans agreed to the following terms:</p>
+    <ul>
+      <p  style="font-size: 1rem;" ><strong>Feline Financial Equality Act</strong>: Guaranteed access to savings accounts and tuna bonds</p>
+      <p  style="font-size: 1rem;" ><strong>Dream Coverage Insurance</strong>: All cats insured for dream-chasing injuries</p>
+      <p  style="font-size: 1rem;" ><strong>Rest Day Mandates</strong>: One day a week dedicated to naps on velvet cushions</p>
+    </ul>
+
+    <h2>6. Aftermath & Purrspective</h2>
+    <p>The strike ended with a mass celebration called <strong>Pawstock</strong>, where cats across the globe danced to lo-fi beats and ate fish-shaped cookies. It marked not just a win for catkind, but a shift in the very fabric of the human-feline partnership.</p>
+    <p>Post-strike, banks now include feline board members, account options tailored to pawsonal needs, and a line of products under the brand <strong>PawPal™</strong>.</p>
+
+    <p>In the purrspective of history, the <strong>Cat Strike</strong> wasn't just a protest—it was a revolution in respect, meowgic, and mutual understanding. And it all began with a single defiant yawn.</p>
+    <p><em>So next time your cat naps on your laptop, know this: they're not just sleeping—they're negotiating for their future.</em></p>
+  </div>
+</div>
+  
+   <script src="{{ url_for('static', filename='js/close_account.js') }}"></script>
+
+
+</body>
+</html>

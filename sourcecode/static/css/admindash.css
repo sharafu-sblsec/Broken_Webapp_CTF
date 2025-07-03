@@ -1,0 +1,87 @@
+body {
+      background: 
+       linear-gradient(rgba(118, 177, 228, 0.7), rgba(255, 255, 255, 0.6)), 
+       url('/static/cat9.jpg') no-repeat center center/cover;
+      font-family: 'Roboto', sans-serif;
+      background-color: #f8f9fa;
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      padding: 0;
+    }
+
+    .title-box {
+       background: linear-gradient(45deg, rgb(56, 118, 169) 20%, rgb(219, 222, 226), rgb(98, 136, 172) 60%, rgb(42, 157, 157), bisque);
+       color: rgb(234, 255, 0);
+       padding: 1rem;
+       border-radius: 0px;
+       backdrop-filter: blur(1px);
+       box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+
+       width: 100%;
+       max-width: 100%;
+       min-width: 160px;
+       margin: 0rem auto;           
+       text-align: center;
+       box-sizing: border-box;
+       position: sticky;
+       top: 0;
+       
+    }
+    
+     .logo {
+       margin: 0.5rem auto 0 auto;
+       width: 50px;
+       height: auto;
+       display: block;
+    }
+
+    .admin-box {
+      
+      padding: 2rem;
+      border-radius: 5px;
+      backdrop-filter: blur(6px);
+      flex: 1 1 100%;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+      max-width: 1200px;
+      overflow-y: auto;
+      margin: auto;
+    }
+
+    .admin-box img {
+      width: 40px;
+      height: 40px;
+      object-fit: contain;
+    }
+
+    .admin-title {
+      font-size: 1.8rem;
+      font-weight: bold;
+      text-align: center;
+      color: #010a0e;
+      margin-bottom: 2rem;
+    }
+
+    .section-title {
+      margin-top: 2rem;
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: #343a40;
+    }
+    
+
+    .user-table th,
+    .user-table td {
+      vertical-align: middle;
+    }
+
+    small.text-muted {
+    font-size: 0.70rem;
+    display: block;
+    }
+
+    @media (max-width: 768px) {
+      .admin-title {
+        font-size: 1.4rem;
+      }
+    }

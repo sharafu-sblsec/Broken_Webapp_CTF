@@ -1,0 +1,115 @@
+body {
+      background: linear-gradient(to top, #4189cd, #a8bfcb);
+      background-size: cover;
+      font-family: 'Roboto', sans-serif;
+      background-attachment: fixed;
+    }
+
+    .overlay {
+      background: 
+       linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.6)), 
+       url('/static/cat2.jpg') no-repeat center center/cover;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .overlay-flex {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 2rem;
+      flex-wrap: wrap;
+      padding: 2rem;
+      width: 100%;
+      max-width: 1400px;
+      box-sizing: border-box;
+    }
+
+    .register-box {
+      
+      padding: 1.0rem;
+      border-radius: 2px;
+      
+      flex: 1 1 100%;
+      max-width: 370px;
+      max-height: 500px;
+      min-height: 100px;
+      
+      width: 100%;
+    }
+
+
+    .register-title {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+   .register-title img {
+      margin-top: 0.4rem;
+      width: 30px;
+      height: auto;
+    }
+
+    .form-label {
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+
+    .login-link {
+      text-align: center;
+      margin-top: 4rem;
+      font-size: 0.8rem;
+    }
+
+    small.text-muted {
+    font-size: 0.70rem;
+    display: block;
+    }
+
+    .btn-custom {
+      width: 100%;
+    }
+
+    .text-box {
+      flex: 1 1 auto;
+      max-width: 900px;
+      padding: 1.5rem; 
+      border-radius: 8px;
+  
+    }
+
+    .text-box h2 {
+      font-size: 1.8rem;
+      font-weight:bolder ;
+      margin-bottom: 1rem;
+      text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+    }
+
+    .text-box p {
+      font-size: 1.1rem;
+      font-weight: 400;
+      line-height: 1.6;
+    }
+
+    
+    @media (max-width: 1024px) {
+      .register-box {
+        padding: 0.5rem;
+        margin-left: 0;
+        justify-content: center;
+      }
+      .overlay-flex {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .text-box {
+        margin-top: 0.5rem;
+        text-align: center;
+      }
+      
+    }
